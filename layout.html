@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  background-color: black;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -100;
+}
+.circle {    
+    top:0;
+    bottom:0;
+    left:0;
+    /* right:0; */
+    margin:auto;
+    position:absolute;
+    width:200px;
+    height:200px;
+    border: 2px solid blue;
+    background-color: aqua;
+    animation:animate 5s 0s 1 ;
+    border-radius:50%;
+    z-index: -100;
+    transition: all 2s ease-in-out;
+}
+.code{
+  position: absolute;
+  top: 12vh;
+  left: 4vw;
+  text-decoration: none;
+  font-size: 2em;
+}
+@keyframes animate {
+    10% {
+        transform:rotateX(180deg) rotateY(720deg);
+        background:aqua;
+    }
+    30% {
+        background:lime;
+    }
+    50% {
+        background:yellow;
+       
+        
+    }
+    70% {
+        background:orange;
+        
+        
+    }
+    90% {
+        background:white;
+        
+    }
+    100% {
+        transform:rotateZ(90deg) rotateY(20deg);
+        background:red;
+        
+    }
+} 
+@media screen and (max-width:430px) {
+  .circle{
+    height: 100px;
+    width: 100px;
+    bottom: 500px;
+    left: 180px;
+  }
+  .code{
+    top: 30px;
+  }
+
+} 
+@media screen and (max-width:380px) {
+  .circle{
+    left: 140px;
+  }
+}
+@media screen and (max-width:325px){
+  .circle{
+    left: 120px;
+  }
+}         
+</style>
+</head>
+<body>
+
+<video  loop id="myVideo" height="200vh" controls autoplay >
+  <source src="./pain-1.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+    <div class="circle">
+        <a href="./index1.html" class="code">task</a>
+    </div>
+</div>
+
+</body>
+</html>
